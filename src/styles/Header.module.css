@@ -117,7 +117,7 @@ header {
 
 @media screen and (max-width: 479px) {
     .ulLinks {
-        gap: 75px;
+        gap: 100px;
     }
 }
 
