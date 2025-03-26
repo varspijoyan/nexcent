@@ -135,3 +135,18 @@ header {
         margin-bottom: 20px;
     }
 }
+
+@media screen and (max-width: 350px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .ulLinks {
+        top: 140px;
+        gap: 50px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+}
