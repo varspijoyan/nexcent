@@ -1,2 +1,17 @@
 /* Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* root variables */
+:root {
+  /* colors */
+  --clr-primary: #43a046;
+  --clr-secondary: #263238;
+  --clr-neutral-grey: #717171;
+  --clr-neutral-dgrey: #4d4d4d;
+  --clr-neutral-silver: #f5f7fa;
+  --clr-white: #ffffff;
+  --clr-green-tint-1: #66bb69;
+  --clr-green-tint-2: #c8e6c9;
+  /* font */
+  --ff-inter: "Inter", sans-serif;
+}
