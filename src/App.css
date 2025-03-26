@@ -31,4 +31,5 @@ body {
   color: var(--clr-neutral-dgrey);
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
