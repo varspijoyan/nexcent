@@ -16,10 +16,19 @@
   --ff-inter: "Inter", sans-serif;
 }
 
+/* Default styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
+}
+
+/* Body styling */
+body {
+  font-family: var(--ff-inter);
+  color: var(--clr-neutral-dgrey);
+  display: flex;
+  flex-direction: column;
 }
