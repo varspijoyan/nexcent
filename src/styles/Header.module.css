@@ -115,14 +115,20 @@ header {
     }
 }
 
-@media screen and (max-width: 377px) {
+@media screen and (max-width: 480px) {
+    .ulLinks {
+        gap: 90px;
+    }
+}
+
+@media screen and (max-width: 379px) {
     .container {
         flex-direction: column;
     }
 
     .ulLinks {
         top: 140px;
-        gap: 40px;
+        gap: 80px;
     }
 
     .logo {
