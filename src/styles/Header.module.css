@@ -115,12 +115,6 @@ header {
     }
 }
 
-@media screen and (max-width: 489px) {
-    .ulLinks {
-        gap: 70px;
-    }
-}
-
 @media screen and (max-width: 377px) {
     .container {
         flex-direction: column;
@@ -128,7 +122,7 @@ header {
 
     .ulLinks {
         top: 140px;
-        gap: 60px;
+        gap: 80px;
     }
 
     .logo {
