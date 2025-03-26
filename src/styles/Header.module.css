@@ -121,20 +121,6 @@ header {
     }
 }
 
-@media screen and (max-width: 379px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .ulLinks {
-        top: 140px;
-        gap: 50px;
-    }
-
-    .logo {
-        margin-bottom: 20px;
-    }
-}
 
 @media screen and (max-width: 369px) {
     .container {
