@@ -115,7 +115,6 @@ header {
     }
 }
 
-/* 479px start of phone styling  */
 @media screen and (max-width: 379px) {
     .container {
         flex-direction: column;
