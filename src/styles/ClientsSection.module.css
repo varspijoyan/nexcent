@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.image > img {
+    width: 40px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 991px) {
+    .logoContainer {
+        flex-wrap: wrap;
+        gap: 70px;
+    }
+}
