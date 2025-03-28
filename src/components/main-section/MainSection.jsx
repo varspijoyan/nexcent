@@ -1,5 +1,5 @@
 import styles from "../../styles/MainSection.module.css";
-import mainSectionImage from "../../assets/mainSectionImage.svg";
+import mainSectionImage from "../../assets/MainSectionImage.svg";
 
 const MainSection = () => {
     return (
