@@ -1,8 +1,11 @@
+import MainSection from "../components/main-section/MainSection";
+
 const MainPage = () => {
-    return (
-        <>
-        </>
-    );
-}
+  return (
+    <>
+      <MainSection />
+    </>
+  );
+};
 
 export default MainPage;
