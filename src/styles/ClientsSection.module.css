@@ -40,4 +40,8 @@ section {
         flex-wrap: wrap;
         gap: 70px;
     }
+
+    .textContainer {
+        text-align: center;
+    }
 }
