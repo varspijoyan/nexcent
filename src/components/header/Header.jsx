@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <div className={styles.container}>
-        <img className={styles.logo} src={logo} alt="header logo" />
+        <img className={styles.logo} src={logo} alt="header logo" onClick={() => window.scrollTo(0, 0)}/>
         <nav className={styles.navLinks}>
           <ul className={`${styles.ulLinks} ${isOpen ? styles.show : ""}`}>
             <li>
