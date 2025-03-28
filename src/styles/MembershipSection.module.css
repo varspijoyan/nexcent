@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+}
+
+.textContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.blogContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.blogContainer .blog {
+    width: 300px;
+    height: auto;
+    background-color: var(--clr-white);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 20px;
+}
+
+.blogTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.blogTitle {
+    font-size: 25px;
+}
+
+.imageContainer {
+    background-color: var(--clr-green-tint-2);
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 20px;
+}
+
+.imageContainer > img {
+    width: 40px;
+    position: relative;
+    top: -6px;
+    left: -13px;
+}
+
+@media screen and (max-width: 991px) {
+    .title {
+        font-size: 30px;
+    }
+}
