@@ -70,3 +70,9 @@
     font-weight: 600;
     color: var(--clr-primary);
 }
+
+@media screen and (max-width: 991px) {
+    .textContainer {
+        width: 80%;
+    }
+}
