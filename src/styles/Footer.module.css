@@ -78,6 +78,10 @@ footer {
     background-color: var(--clr-green-tint-1);
 }
 
+.mainInfo img {
+    width: 150px;
+}
+
 @media (hover:none) {
     .btn:hover {
         background-color: var(--clr-white);
