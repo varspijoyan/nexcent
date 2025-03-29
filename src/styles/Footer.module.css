@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px 30px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.mainInfo {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+footer {
+    width: 100%;
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+}
+
+.footerLinks {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.link a {
+    color: var(--clr-white);
+}
+
+.title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.link input {
+    width: 120%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(65, 65, 65);
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: var(--clr-primary);
+    cursor: pointer;
+    transition: linear 0.4s;
+}
+
+.btn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.btn:active {
+    background-color: var(--clr-green-tint-1);
+}
+
+@media (hover:none) {
+    .btn:hover {
+        background-color: var(--clr-white);
+        color: var(--clr-primary);
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+
+}
