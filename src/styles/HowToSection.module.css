@@ -35,6 +35,7 @@ section {
     border-radius: 5px;
     background-color: var(--clr-primary);
     color: var(--clr-white);
+    cursor: pointer;
 }
 
 .btn:active {
