@@ -1,4 +1,5 @@
 import ClientsSection from "../components/clients-section/ClientsSection";
+import CustomerFeedbackSection from "../components/customer-feedback-section/CustomerFeedbackSection";
 import HowToSection from "../components/how-to-section/HowToSection";
 import LearnMoreSection from "../components/learn-more-section/LearnMoreSection";
 import MainSection from "../components/main-section/MainSection";
@@ -14,6 +15,7 @@ const MainPage = () => {
       <LearnMoreSection />
       <ServiceSection />
       <HowToSection />
+      <CustomerFeedbackSection />
     </>
   );
 };
