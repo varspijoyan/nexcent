@@ -1,0 +1,134 @@
+{
+    "translation": {
+        "header": {
+            "links": {
+                "home": "Home",
+                "features": "Features",
+                "community": "Community",
+                "blog": "Blog",
+                "pricing": "Pricing"
+            },
+            "button": "Register"
+        },
+        "mainSection": {
+            "titleParts": {
+                "titlePart1": "Lesson and insights",
+                "titlePart2": "from 8 years"
+            },
+            "description": "Where to grow your business as a photographer: site or social media",
+            "button": "Register"
+        },
+        "clientsSection": {
+            "title": "Our Clients",
+            "description": "We have been working with some Fortune 500+ clients"
+        },
+        "membershipSection": {
+            "titleParts": {
+                "titlePart1": "Manage your entire community",
+                "titlePart2": "in a single system"
+            },
+            "description": "Who is Nexcent suitable for",
+            "cards": {
+                "card1": {
+                    "titleParts": {
+                        "titlePart1": "Membership",
+                        "titlePart2": "Organizations"
+                    },
+                    "description": "Our membership management software provides full automation of membership renewals and payments"
+                },
+                "card2": {
+                    "titleParts": {
+                        "titlePart1": "National",
+                        "titlePart2": "Associations"
+                    },
+                    "description": "Our membership management software provides full automation of membership renewals and payments"
+                },
+                "card3": {
+                    "titleParts": {
+                        "titlePart1": "Clubs And",
+                        "titlePart2": "Groups"
+                    },
+                    "description": "Our membership management software provides full automation of membership renewals and payments"
+                }
+            }
+        },
+        "learnMoreSection": {
+            "title": "The unseen part of spending three years at Pixelgrade",
+            "description": "Over the past three years at Pixelgrade, we’ve uncovered the hidden challenges and rewarding experiences of crafting digital solutions. From pushing creative boundaries to refining every pixel, our journey has been filled with innovation, collaboration, and continuous learning. Here’s what we discovered along the way.",
+            "button": "Learn More"
+        },
+        "serviceSection": {
+            "titleParts": {
+                "titlePart1": "Helping a local",
+                "titlePart2": "business reinvent itself"
+            },
+            "description": "We reached here with our hard work and dedication",
+            "serviceTypes": {
+                "members": "Members",
+                "clubs": "Clubs",
+                "events": "Events",
+                "payments": "Payments"
+            }
+        },
+        "howToSection": {
+            "title": "How to design your site footer like we did",
+            "description": "A well-designed footer enhances user experience and strengthens your brand identity. It should be clean, informative, and easy to navigate. Consider including essential links, contact details, and social media icons to keep visitors connected. With the right design, your footer can be both functional and aesthetically pleasing—just like ours.",
+            "button": "Learn More"
+        },
+        "customerFeedbackSection": {
+            "link": "Meet all customers"
+        },
+        "blogSection": {
+            "title": "Caring is the best marketing",
+            "description": "The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​",
+            "blogCards": {
+                "card1": {
+                    "titleParts": {
+                        "titlePart1": "Creating Streamlined",
+                        "titlePart2": "Safeguarding Processes with",
+                        "titlePart3": "OneRed"
+                    }
+                },
+                "card2": {
+                    "titleParts": {
+                        "titlePart1": "What are you safeguarding",
+                        "titlePart2": "responsibilities and how can",
+                        "titlePart3": "you manage them"
+                    }
+                },
+                "card3": {
+                    "titleParts": {
+                        "titlePart1": "Revamping the Membership",
+                        "titlePart2": "Model with Triathlon",
+                        "titlePart3": "Australia"
+                    }
+                },
+                "link": "Read more"
+            }
+        },
+        "footer": {
+            "links": {
+                "company": {
+                    "title": "Company",
+                    "aboutUs": "About us",
+                    "blog": "Blog",
+                    "contactUs": "Contact us",
+                    "pricing": "Pricing",
+                    "testimonials": "Testimonials"
+                },
+                "support": {
+                    "title": "Support",
+                    "helpCenter": "Help center",
+                    "terms": "Terms of service",
+                    "legal": "Legal",
+                    "privacy": "Privacy policy",
+                    "status": "Status"
+                },
+                "input": {
+                    "title": "Stay up to date",
+                    "button": "Submit"
+                }
+            }
+        }
+    }
+}
