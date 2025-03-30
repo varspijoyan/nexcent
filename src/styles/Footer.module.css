@@ -40,6 +40,11 @@ footer {
 
 .link a {
     color: var(--clr-white);
+    transition: 0.4s linear;
+}
+
+.link a:hover {
+    color: var(--clr-primary);
 }
 
 .title {
@@ -119,5 +124,9 @@ footer {
 
     .iconLinks .icon:hover {
         transform: scale(1);
+    }
+
+    .link a:hover {
+        color: var(--clr-white);
     }
 }
