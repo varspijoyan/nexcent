@@ -121,6 +121,16 @@ header {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+    }   
+
+    .logo {
+        margin-bottom: 20px;
+    }
+}
+
 
 @media screen and (max-width: 369px) {
     .container {
