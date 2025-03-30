@@ -61,6 +61,7 @@ footer {
     padding-left: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: var(--clr-white);
 }
 
 .btn {
@@ -114,7 +115,6 @@ footer {
 .iconLinks .icon:hover {
     transform: scale(1.1);
 }
-
 
 @media (hover:none) {
     .btn:hover {
