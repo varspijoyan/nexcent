@@ -119,10 +119,19 @@ header {
     .ulLinks {
         gap: 90px;
     }
+
+    .navLinks {
+        gap: 10px;
+    }
 }
 
+@media screen and (max-width: 441px) {
+    .navLinks {
+        gap: 3px;
+    }
+}
 
-@media screen and (max-width: 369px) {
+@media screen and (max-width: 426px) {
     .container {
         flex-direction: column;
     }
