@@ -1,0 +1,23 @@
+.languageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.language {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 209, 209);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.langActive {
+    background-color: var(--clr-green-tint-1);
+}
