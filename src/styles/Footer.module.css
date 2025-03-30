@@ -82,9 +82,42 @@ footer {
     width: 150px;
 }
 
+.iconLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconLinks .icon img {
+    width: 20px;
+}
+
+.iconLinks .icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(67, 67, 67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.6s linear;
+    transition: transform 0.3s ease-in-out;
+}
+
+.iconLinks .icon:hover {
+    transform: scale(1.1);
+}
+
+
 @media (hover:none) {
     .btn:hover {
         background-color: var(--clr-white);
         color: var(--clr-primary);
+    }
+
+    .iconLinks .icon:hover {
+        transform: scale(1);
     }
 }
