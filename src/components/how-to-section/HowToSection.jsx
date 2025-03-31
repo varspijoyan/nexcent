@@ -1,22 +1,18 @@
+import { useTranslation } from "react-i18next";
 import howToSectionImage from "../../assets/HowToSectionImage.svg";
 import styles from "../../styles/HowToSection.module.css";
-
+import i18n from "../../i18n";
 const HowToSection = () => {
+  const { t } = useTranslation();
+  const language = i18n.language;
   return (
     <section>
       <div className={styles.container}>
         <img className={styles.image} src={howToSectionImage} alt="image" />
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>How to design your site footer like we did</h1>
-          <p className={styles.description}>
-            A well-designed footer enhances user experience and strengthens your
-            brand identity. It should be clean, informative, and easy to
-            navigate. Consider including essential links, contact details, and
-            social media icons to keep visitors connected. With the right
-            design, your footer can be both functional and aesthetically
-            pleasing—just like ours.
-          </p>
-          <button className={styles.btn}>Learn More</button>
+          <h1 className={`${styles.title} ${language === 'ru' ? styles.titleRu : ""}`}>{t("howToSection.title")}</h1>
+          <p className={styles.description}>{t("howToSection.description")}</p>
+          <button className={styles.btn}>{t("howToSection.button")}</button>
         </div>
       </div>
     </section>
