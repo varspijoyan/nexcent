@@ -16,6 +16,10 @@
     gap: 10px;
 }
 
+.ruBlogTextContainer {
+   font-size: 15px;
+}
+
 .blogContainer {
     display: flex;
     justify-content: center;
