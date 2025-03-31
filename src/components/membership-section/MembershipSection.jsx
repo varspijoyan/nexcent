@@ -1,18 +1,22 @@
+import { useTranslation } from "react-i18next";
 import icon1 from "../../assets/Icon1.svg";
 import icon2 from "../../assets/Icon2.svg";
 import icon3 from "../../assets/Icon3.svg";
 import styles from "../../styles/MembershipSection.module.css";
 
 const MembershipSection = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
-            Manage your entire community <br />
-            in a single system
+            {t("membershipSection.titleParts.titlePart1")} <br />
+            {t("membershipSection.titleParts.titlePart2")}
           </h1>
-          <p className={styles.description}>Who is Nexcent suitable for?</p>
+          <p className={styles.description}>
+            {t("membershipSection.description")}?
+          </p>
         </div>
         <div className={styles.blogContainer}>
           <div className={styles.blog}>
@@ -21,12 +25,12 @@ const MembershipSection = () => {
             </div>
             <div className={styles.blogTextContainer}>
               <h3 className={styles.blogTitle}>
-                Membership <br />
-                Organizations
+                {t("membershipSection.cards.card1.titleParts.titlePart1")}{" "}
+                <br />
+                {t("membershipSection.cards.card1.titleParts.titlePart2")}
               </h3>
               <p className={styles.blogDescription}>
-                Our membership management software provides full automation of
-                membership renewals and payments
+                {t("membershipSection.cards.card1.description")}
               </p>
             </div>
           </div>
@@ -36,12 +40,12 @@ const MembershipSection = () => {
             </div>
             <div className={styles.blogTextContainer}>
               <h3 className={styles.blogTitle}>
-                National <br />
-                Associations
+                {t("membershipSection.cards.card2.titleParts.titlePart1")}{" "}
+                <br />
+                {t("membershipSection.cards.card2.titleParts.titlePart2")}
               </h3>
               <p className={styles.blogDescription}>
-                Our membership management software provides full automation of
-                membership renewals and payments
+                {t("membershipSection.cards.card2.description")}
               </p>
             </div>
           </div>
@@ -51,12 +55,12 @@ const MembershipSection = () => {
             </div>
             <div className={styles.blogTextContainer}>
               <h3 className={styles.blogTitle}>
-                Clubs And <br />
-                Groups
+                {t("membershipSection.cards.card3.titleParts.titlePart1")}{" "}
+                <br />
+                {t("membershipSection.cards.card3.titleParts.titlePart2")}
               </h3>
               <p className={styles.blogDescription}>
-                Our membership management software provides full automation of
-                membership renewals and payments
+                {t("membershipSection.cards.card3.description")}
               </p>
             </div>
           </div>
