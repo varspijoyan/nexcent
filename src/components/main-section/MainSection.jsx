@@ -1,14 +1,16 @@
 import styles from "../../styles/MainSection.module.css";
 import mainSectionImage from "../../assets/MainSectionImage.svg";
+import { useTranslation } from "react-i18next";
 
 const MainSection = () => {
+    const { t } = useTranslation();
     return (
         <main>
             <div className={styles.container}>
                 <div className={styles.textContainer}>
-                    <h1 className={styles.title}>Lesson and insights <br /><span className={styles.highlight}>from 8 years</span></h1>
-                    <p className={styles.description}>Where to grow your business as a photographer: site or social media?</p>
-                    <button className={styles.btn}>Register</button>
+                    <h1 className={styles.title}>{t("mainSection.titleParts.titlePart1")} <br /><span className={styles.highlight}>{t("mainSection.titleParts.titlePart2")}</span></h1>
+                    <p className={styles.description}>{t("mainSection.description")}?</p>
+                    <button className={styles.btn}>{t("mainSection.button")}</button>
                 </div>
                 <img className={styles.image} src={mainSectionImage} alt="main section image" />
             </div>
