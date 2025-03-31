@@ -3,8 +3,10 @@ import footerLogo from "../../assets/Footer-Logo.svg";
 import igLogo from "../../assets/ig-logo.svg";
 import twtLogo from "../../assets/twitter-logo.svg";
 import ytLogo from "../../assets/yt-logo.svg";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <footer>
             <div className={styles.container}>
@@ -28,25 +30,25 @@ const Footer = () => {
                 </div>
                 <div className={styles.footerLinks}>
                     <div className={styles.link}>
-                        <h3 className={styles.title}>Company</h3>
-                        <p><a href="#">About us</a></p>
-                        <p><a href="#">Blog</a></p>
-                        <p><a href="#">Contact us</a></p>
-                        <p><a href="#">Pricing</a></p>
-                        <p><a href="#">Testimonials</a></p>
+                        <h3 className={styles.title}>{t("footer.links.company.title")}</h3>
+                        <p><a href="#">{t("footer.links.company.aboutUs")}</a></p>
+                        <p><a href="#">{t("footer.links.company.blog")}</a></p>
+                        <p><a href="#">{t("footer.links.company.contactUs")}</a></p>
+                        <p><a href="#">{t("footer.links.company.pricing")}</a></p>
+                        <p><a href="#">{t("footer.links.company.testimonials")}</a></p>
                     </div>
                     <div className={styles.link}>
-                        <h3 className={styles.title}>Support</h3>
-                        <p><a href="#">Help center</a></p>
-                        <p><a href="#">Terms of service</a></p>
-                        <p><a href="#">Legal</a></p>
-                        <p><a href="#">Privacy policy</a></p>
-                        <p><a href="#">Status</a></p>
+                        <h3 className={styles.title}>{t("footer.links.support.title")}</h3>
+                        <p><a href="#">{t("footer.links.support.helpCenter")}</a></p>
+                        <p><a href="#">{t("footer.links.support.terms")}</a></p>
+                        <p><a href="#">{t("footer.links.support.legal")}</a></p>
+                        <p><a href="#">{t("footer.links.support.privacy")}</a></p>
+                        <p><a href="#">{t("footer.links.support.status")}</a></p>
                     </div>
                     <div className={styles.link}>
-                        <h3 className={styles.title}>Stay up to date</h3>
+                        <h3 className={styles.title}>{t("footer.links.input.title")}</h3>
                         <input type="email" name="email" placeholder="Enter your email"/>
-                        <button className={styles.btn}>Submit</button>
+                        <button className={styles.btn}>{t("footer.links.input.button")}</button>
                     </div>
                 </div>
             </div>
