@@ -6,8 +6,10 @@ import logo3 from "../../assets/Logo3.svg";
 import logo4 from "../../assets/Logo4.svg";
 import logo5 from "../../assets/Logo5.svg";
 import logo6 from "../../assets/Logo6.svg";
+import { useTranslation } from "react-i18next";
 
 const CustomerFeedbackSection = () => {
+  const { t } = useTranslation();
   return (
     <section className={styles.customerSection}>
       <div className={styles.container}>
@@ -32,7 +34,7 @@ const CustomerFeedbackSection = () => {
             <img src={logo4} alt="icon image" />
             <img src={logo5} alt="icon image" />
             <img src={logo6} alt="icon image" />
-            <a href="#" className={styles.link}>Meet all customers</a>
+            <a href="#" className={styles.link}>{t("customerFeedbackSection.link")}</a>
           </div>
         </div>
       </div>
