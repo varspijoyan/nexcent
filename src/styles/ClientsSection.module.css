@@ -44,4 +44,8 @@ section {
     .textContainer {
         text-align: center;
     }
+
+    .title {
+        font-size: 28px;
+    }
 }

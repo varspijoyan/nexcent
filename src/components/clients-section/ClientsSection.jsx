@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import logo1 from "../../assets/Logo1.svg";
 import logo2 from "../../assets/Logo2.svg";
 import logo3 from "../../assets/Logo3.svg";
@@ -7,14 +8,13 @@ import logo6 from "../../assets/Logo6.svg";
 import styles from "../../styles/ClientsSection.module.css";
 
 const ClientsSection = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Our Clients</h1>
-          <p className={styles.description}>
-            We have been working with some Fortune 500+ clients
-          </p>
+          <h1 className={styles.title}>{t("clientsSection.title")}</h1>
+          <p className={styles.description}>{t("clientsSection.description")}</p>
         </div>
         <div className={styles.logoContainer}>
           <div className={styles.image}>
