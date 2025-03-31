@@ -1,23 +1,19 @@
+import { useTranslation } from "react-i18next";
 import learnMoreSectionImage from "../../assets/LearnMoreSectionImage.svg";
 import styles from "../../styles/LearnMoreSection.module.css";
 
 const LearnMoreSection = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <div className={styles.container}>
         <img className={styles.image} src={learnMoreSectionImage} alt="section image" />
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
-            The unseen part of spending three years at Pixelgrade
+            {t("learnMoreSection.title")}
           </h1>
-          <p className={styles.description}>
-            Over the past three years at Pixelgrade, we’ve uncovered the hidden
-            challenges and rewarding experiences of crafting digital solutions.
-            From pushing creative boundaries to refining every pixel, our
-            journey has been filled with innovation, collaboration, and
-            continuous learning. Here’s what we discovered along the way.
-          </p>
-          <button className={styles.btn}>Learn More</button>
+          <p className={styles.description}>{t("learnMoreSection.description")}</p>
+          <button className={styles.btn}>{t("learnMoreSection.button")}</button>
         </div>
       </div>
     </section>
