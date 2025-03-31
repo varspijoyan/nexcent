@@ -80,7 +80,7 @@
         },
         "blogSection": {
             "title": "Забота — лучший маркетинг",
-            "description": "The Nextcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​",
+            "description": "Блог Nextcent — лучшее место, где можно почитать о последних инсайтах, тенденциях и многом другом в отношении членства. Посмотрите, кто присоединяется к сообществу, прочитайте о том, как наше сообщество увеличивает свой доход от членства и многое другое.​",
             "blogCards": {
                 "card1": {
                     "titleParts": {
@@ -91,8 +91,8 @@
                 },
                 "card2": {
                     "titleParts": {
-                        "titlePart1": "Каковы ваши обязанности",
-                        "titlePart2": "по обеспечению безопасности и",
+                        "titlePart1": "Каковы ваши обязанности по",
+                        "titlePart2": "обеспечению безопасности и",
                         "titlePart3": "как вы можете ими управлять"
                     }
                 },
