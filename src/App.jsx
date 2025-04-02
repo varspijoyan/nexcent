@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import "./i18n";
 import MainPage from "./pages/MainPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             </>
           }
         />
+        <Route path="/registration-page" element={<RegistrationPage />}/>
       </Routes>
     </>
   );
