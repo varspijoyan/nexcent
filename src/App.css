@@ -12,6 +12,7 @@
   --clr-white: #ffffff;
   --clr-green-tint-1: #66bb69;
   --clr-green-tint-2: #c8e6c9;
+  --clr-error: #ff0000;
   /* font */
   --ff-inter: "Inter", sans-serif;
 }
