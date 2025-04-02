@@ -13,7 +13,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 ### About
 
-Simple single page website deployed on Netlify. This website has only router for main page, there is no registration page added, no home, features, community, blog and pricing pages added, and no apis fetched. 
+Simple Landing page website deployed on Netlify. This website has  routes for main page, registration page and login page. There is no home, features, community, blog and pricing pages added, and no apis fetched. 
 Used 3 libraries
 
 1. [hamburger-react](https://www.npmjs.com/package/hamburger-react) - to display responsive menu
