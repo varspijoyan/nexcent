@@ -96,7 +96,7 @@ const RegistrationPage = () => {
             <p className={styles.error}>{state.errors.passwordError}</p>
           )}  
           <button type="submit" className={styles.btn}>{isPending ? "Sumbitting": "Submit"}</button>
-          <p className={styles.link}>Already have an account? <Link>Login</Link></p>
+          <p className={styles.link}>Already have an account? <Link to="/login-page">Login</Link></p>
         </form>
       </div>
     </div>
