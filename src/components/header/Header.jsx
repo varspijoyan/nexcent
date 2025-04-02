@@ -4,11 +4,13 @@ import logo from "../../assets/Header-Logo.svg";
 import styles from "../../styles/Header.module.css";
 import Language from "../language/Language";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
-
+  const navigate = useNavigate();
+ 
   return (
     <header>
       <div className={styles.container}>
@@ -36,7 +38,12 @@ const Header = () => {
               <a href="#">{t("header.links.pricing")}</a>
             </li>
           </ul>
-          <button className={styles.btn}>{t("header.button")}</button>
+          <button 
+            className={styles.btn}
+            onClick={() => {
+              navigate("/registration-page");
+            }}
+          >{t("header.button")}</button>
           <Language />
           <div className={styles.respMenu}>
             <Hamburger toggled={isOpen} toggle={setIsOpen} />
