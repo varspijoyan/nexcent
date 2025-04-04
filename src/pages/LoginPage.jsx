@@ -1,42 +1,42 @@
 import { useActionState } from "react";
-import styles from "../styles/LoginPage.module.css";
 import { Link } from "react-router-dom";
+import styles from "../styles/LoginPage.module.css";
 
 const LoginPage = () => {
   const [state, action, isPending] = useActionState(
     async (prevState, formData) => {
-        const email = formData.get("email");
-        const password = formData.get("password");
+      const email = formData.get("email");
+      const password = formData.get("password");
 
-        const errors = {
-            emailError: "",
-            passwordError: ""
-        };
+      const errors = {
+        emailError: "",
+        passwordError: "",
+      };
 
-        const emailFormat = /^\w+@(?:gmail|yahoo|outlook|hotmail|live|icloud|aol|protonmail)\.\w{2,}$/;
-        const passwordFormat =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
+      const emailFormat =
+        /^\w+@(?:gmail|yahoo|outlook|hotmail|live|icloud|aol|protonmail)\.\w{2,}$/;
+      const passwordFormat =
+        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
 
-        if(!email) 
-            errors.emailError = "Email is required";
-        else if(!emailFormat.test(email))
-            errors.emailError = "Incorrect email format";
+      if (!email) errors.emailError = "Email is required";
+      else if (!emailFormat.test(email))
+        errors.emailError = "Incorrect email format";
 
-        if(!password)
-            errors.passwordError = "Password is required";
-        else if(!passwordFormat.test(password))
-            errors.passwordError = "Incorrect password format";
+      if (!password) errors.passwordError = "Password is required";
+      else if (!passwordFormat.test(password))
+        errors.passwordError = "Incorrect password format";
 
-        if(Object.values(errors).some(error => error != "")) {
-            return {errors}
-        }
+      if (Object.values(errors).some((error) => error != "")) {
+        return { errors };
+      }
 
-        return {errors: {}}
+      return { errors: {} };
     }
   );
 
   const handleChange = (e) => {
     action(new FormData(e.target.form));
-  }
+  };
 
   return (
     <div className={styles.loginPageContainer}>
@@ -62,9 +62,11 @@ const LoginPage = () => {
             <p className={styles.error}>{state.errors.passwordError}</p>
           )}
           <button className={styles.btn} type="submit">
-            Submit
+            {isPending ? "Submitting..." : "Submit"}
           </button>
-          <p className={styles.link}>Don't have an account? <Link to="/registration-page">Register</Link></p>
+          <p className={styles.link}>
+            Don't have an account? <Link to="/registration-page">Register</Link>
+          </p>
         </form>
       </div>
     </div>
