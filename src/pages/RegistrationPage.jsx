@@ -70,7 +70,6 @@ const RegistrationPage = () => {
           <input
             type="text"
             name="lastName"
-            id=""
             placeholder="Enter your last name"
             onChange={handleChange}
           />
