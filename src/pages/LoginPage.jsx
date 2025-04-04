@@ -13,10 +13,8 @@ const LoginPage = () => {
         passwordError: "",
       };
 
-      const emailFormat =
-        /^\w+@(?:gmail|yahoo|outlook|hotmail|live|icloud|aol|protonmail)\.\w{2,}$/;
-      const passwordFormat =
-        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
+      const emailFormat = /^\w+@(?:gmail|yahoo|outlook|hotmail|live|icloud|aol|protonmail)\.\w{2,}$/;
+      const passwordFormat = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
 
       if (!email) errors.emailError = "Email is required";
       else if (!emailFormat.test(email))
