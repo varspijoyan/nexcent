@@ -73,4 +73,6 @@ body {
     color: var(--clr-error);
     align-self: flex-start;
     margin-top: -10px;
+    margin-left: 5px;
+    font-size: 14px;
 }
