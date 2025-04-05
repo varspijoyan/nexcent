@@ -8,7 +8,7 @@ const Language = () => {
         setLanguage(lng);
         i18n.changeLanguage(lng);
         localStorage.setItem("language", lng);
-    });
+    }, []);
 
     return (
         <div className={styles.languageContainer}>
