@@ -5,20 +5,21 @@ import styles from "../styles/LoginPage.module.css";
 const LoginPage = () => {
   const [state, action, isPending] = useActionState(
     async (prevState, formData) => {
-      const email = formData.get("email");
+      const username = formData.get("username");
       const password = formData.get("password");
 
       const errors = {
-        emailError: "",
+        usernameError: "",
         passwordError: "",
       };
 
-      const emailFormat = /^\w+@(?:gmail|yahoo|outlook|hotmail|live|icloud|aol|protonmail)\.\w{2,}$/;
+      const usernameFormat = /^[a-z0-9]+$/;
       const passwordFormat = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
 
-      if (!email) errors.emailError = "Email is required";
-      else if (!emailFormat.test(email))
-        errors.emailError = "Incorrect email format";
+      if (!username) 
+        errors.usernameError = "Username is required";
+      else if (!usernameFormat.test(username))
+        errors.usernameError = "Incorrect username format";
 
       if (!password) errors.passwordError = "Password is required";
       else if (!passwordFormat.test(password))
@@ -42,13 +43,13 @@ const LoginPage = () => {
         <h2 className={styles.title}>Login Page</h2>
         <form action={action} className={styles.formContainer}>
           <input
-            type="email"
-            name="email"
-            placeholder="Enter your email address"
+            type="test"
+            name="username"
+            placeholder="Enter your username"
             onChange={handleChange}
           />
-          {state?.errors?.emailError && (
-            <p className={styles.error}>{state.errors.emailError}</p>
+          {state?.errors?.usernameError && (
+            <p className={styles.error}>{state.errors.usernameError}</p>
           )}
           <input
             type="password"
