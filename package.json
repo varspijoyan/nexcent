@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@nuxt/ufo": "^0.5.4",
     "hamburger-react": "^2.5.2",
     "i18next": "^24.2.3",
     "i18next-browser-languagedetector": "^8.0.4",
