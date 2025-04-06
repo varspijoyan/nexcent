@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import "./i18n";
 import MainPage from "./pages/MainPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             }
           />
           <Route path="/registration-page" element={<RegistrationPage />} />
+          <Route path="/login-page" element={<LoginPage />}/>
         </Routes>
     </>
   );
