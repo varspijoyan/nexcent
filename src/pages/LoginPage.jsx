@@ -60,7 +60,7 @@ const LoginPage = () => {
           {state?.errors?.passwordError && (
             <p className={styles.error}>{state.errors.passwordError}</p>
           )}
-          <button className={styles.btn}>{isPending ? "Submittin" : "Submit"}</button>
+          <button className={styles.btn}>{isPending ? "Submitting" : "Submit"}</button>
           <p>Don't have an account yet? <Link to="/registration-page">Register</Link></p>
         </form>
       </div>
