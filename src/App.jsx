@@ -21,8 +21,6 @@ function App() {
               </>
             }
           />
-          <Route path="/registration-page" element={<RegistrationPage />} />
-          <Route path="/login-page" element={<LoginPage />}/>
         </Routes>
     </>
   );

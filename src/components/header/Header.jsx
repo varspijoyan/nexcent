@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
-  const navigate = useNavigate();
  
   return (
     <header>
@@ -40,9 +39,6 @@ const Header = () => {
           </ul>
           <button 
             className={styles.btn}
-            onClick={() => {
-              navigate("/registration-page");
-            }}
           >{t("header.button")}</button>
           <Language />
           <div className={styles.respMenu}>

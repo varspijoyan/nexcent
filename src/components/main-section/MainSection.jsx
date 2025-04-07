@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 const MainSection = () => {
     const { t } = useTranslation();
-    const navigate = useNavigate();
     return (
         <main>
             <div className={styles.container}>
@@ -14,7 +13,6 @@ const MainSection = () => {
                     <p className={styles.description}>{t("mainSection.description")}?</p>
                     <button 
                         className={styles.btn}
-                        onClick={() => navigate("/registration-page")}
                     >{t("mainSection.button")}</button>
                 </div>
                 <img className={styles.image} src={mainSectionImage} alt="main section image" />
