@@ -111,7 +111,7 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
-                <button className={styles.logoutBtn} onClick={() => dispatch(logout())}>Logout</button>
+                <button className={styles.logoutBtn} onClick={() => dispatch(logout())}>{t("header.logout")}</button>
               </div>
             </>
           )}
