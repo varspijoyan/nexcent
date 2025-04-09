@@ -2,7 +2,7 @@ body {
     background-color: var(--clr-neutral-silver);
 }
 
-.loginPageContainer {
+.usernameContainer {
     display: flex;
     justify-content: center;
     align-items: center;
