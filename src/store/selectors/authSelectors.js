@@ -3,5 +3,5 @@ export function getAuthorizationData(state) {
 }
 
 export function getUserData(state) {
-    return state.authorization.data;
+    return state.authorization.user;
 }
