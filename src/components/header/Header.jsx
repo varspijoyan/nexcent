@@ -33,9 +33,9 @@ const Header = () => {
   
   useEffect(() => {
     if (user) {
-        const storageKey = `${user.id}`;
+        const key = `${user.id}`;
 
-        const savedColors = localStorage.getItem(storageKey);
+        const savedColors = localStorage.getItem(key);
         if (savedColors) {
             const { background, color } = JSON.parse(savedColors);
             setBackgroundColor(background);
@@ -45,7 +45,7 @@ const Header = () => {
             const col = generateRandomColor();
             setBackgroundColor(bg);
             setColor(col);
-            localStorage.setItem(storageKey, JSON.stringify({ background: bg, text: col }));
+            localStorage.setItem(storageKey, JSON.stringify({ background: bg, color: col }));
         }
     }
 }, [user]);
