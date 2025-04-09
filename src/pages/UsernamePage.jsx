@@ -41,7 +41,7 @@ const UsernamePage = () => {
                 if(res.status === 200) {
                     const data = await getMe();
                     dispatch(signIn(data.result));
-                    navigate('/')
+                    navigate('/');
                 }
                 return { errors: {} }
             } catch (error) {

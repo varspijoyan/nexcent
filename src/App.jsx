@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -13,12 +13,14 @@ import { signIn } from "./store/actions/authActions";
 
 function App() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
     api.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
     if (accessToken) {
       getMe().then((data) => {
         dispatch(signIn(data.result));
+        navigate("/");
       });
     }
   }, []);
