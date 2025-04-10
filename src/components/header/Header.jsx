@@ -103,11 +103,11 @@ const Header = () => {
               <div className={styles.userInfo}>
                 <div className={styles.avatar}>
                   <div style={inlineStyles}>
-                    {`${user?.first_name[0]}${user?.last_name[0]}`}
+                    {user?.first_name && user?.last_name ? `${user.first_name.charAt(0)}${user.last_name.charAt(0)}` : "U"}
                   </div>
                   <div className={styles.info}>
                     <div className={styles.info}>
-                      {user?.first_name} {user?.last_name}
+                      {user?.first_name && user?.last_name ? `${user.first_name} ${user.last_name}` : "User"}
                     </div>
                   </div>
                 </div>
