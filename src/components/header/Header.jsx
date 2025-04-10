@@ -45,7 +45,7 @@ const Header = () => {
             const col = generateRandomColor();
             setBackgroundColor(bg);
             setColor(col);
-            localStorage.setItem(storageKey, JSON.stringify({ background: bg, color: col }));
+            localStorage.setItem(key, JSON.stringify({ background: bg, color: col }));
         }
     }
 }, [user]);
