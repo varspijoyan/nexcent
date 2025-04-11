@@ -34,12 +34,15 @@ const Header = () => {
   
   useEffect(() => {
     if (user) {
+        // getting user id
         const key = `${user.id}`;
 
-        const savedColors = localStorage.getItem(key);
+        // saving the id as local storage key and getting the key 
+        const userKey = localStorage.getItem(key);
+
         // if signed user is logged out and signed in again with the same email 
         // the user info should be displayed with the same color as before
-        if (savedColors) {
+        if (userKey) {
             const { background, color } = JSON.parse(savedColors);
             setBackgroundColor(background);
             setColor(color);
