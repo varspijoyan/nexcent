@@ -308,3 +308,9 @@ header {
         right: 180px;
     }
 }
+
+@media screen and (max-width: 283px) {
+    .logoutBtn {
+        right: 160px;
+    }
+}
