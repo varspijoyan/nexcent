@@ -105,6 +105,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .logoutBtn:active {
@@ -118,101 +119,7 @@ header {
     }
 }
 
-/* @media screen and (max-width: 991px) {
-    .respMenu {
-        display: block;
-    }
-
-    .ulLinks {
-        position: absolute;
-        top: 100px;
-        right: 0;
-        width: 70%;
-        background-color: rgb(162, 205, 136);
-        padding: 50px 40px;
-        height: 100vh;
-        flex-direction: column;
-        gap: 100px;
-        z-index: 1000;
-        transform: translateX(100%);
-        opacity: 0;
-        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-        pointer-events: none;
-    }
-
-    .ulLinks li a {
-        font-size: 17px;
-    }
-
-    .ulLinks.show {
-        transform: translateX(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
-}
-
-@media screen and (max-width: 439px) {
-    .navLinks {
-        gap: 3px;
-    }
-
-    .logoutBtn {
-        right: 200px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .ulLinks {
-        gap: 90px;
-    }
-
-    .navLinks {
-        gap: 10px;
-    }
-}
-
-
-
-
-@media screen and (max-width: 700px) {
-    .logoutBtn {
-        right: 250px;
-    }
-}
-
-@media screen and (max-width: 649px) {
-    .logoutBtn {
-        right: 220px;
-    }
-}
-
-@media screen and (max-width: 545px) {
-    .logoutBtn {
-        right: 270px;
-        top: 130px;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .ulLinks {
-        top: 140px;
-        gap: 80px;
-    }
-
-    .logo {
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .logoutBtn {
-        right: 230px;
-    }
-} */
-
-/* Media Queries - ordered from largest to smallest */
+/* Media Queries */
 
 @media screen and (max-width: 991px) {
     .respMenu {
