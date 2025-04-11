@@ -161,13 +161,31 @@ header {
     }
 }
 
-@media screen and (max-width: 441px) {
+@media screen and (max-width: 439px) {
     .navLinks {
         gap: 3px;
     }
 }
 
-@media screen and (max-width: 426px) {
+
+@media screen and (max-width: 700px) {
+    .logoutBtn {
+        right: 250px;
+    }
+}
+
+@media screen and (max-width: 649px) {
+    .logoutBtn {
+        right: 220px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .logoutBtn {
+        right: 270px;
+        top: 130px;
+    }
+
     .container {
         flex-direction: column;
     }
@@ -179,5 +197,11 @@ header {
 
     .logo {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logoutBtn {
+        right: 230px;
     }
 }
