@@ -21,10 +21,11 @@ const Header = () => {
   const navigate = useNavigate();
   
   const generateRandomColor = () => {
-    const red = Math.floor(Math.random() * 256);
-    const green = Math.floor(Math.random() * 256);
-    const blue = Math.floor(Math.random() * 256);
+    const red = Math.floor(Math.random() * 256).toString(16).padStart(2, "0");
+    const green = Math.floor(Math.random() * 256).toString(16).padStart(2, "0");
+    const blue = Math.floor(Math.random() * 256).toString(16).padStart(2, "0");
     const color = "#" + red + green + blue;
+    // console.log(color);
     return color;
   }
   
