@@ -37,11 +37,14 @@ const Header = () => {
         const key = `${user.id}`;
 
         const savedColors = localStorage.getItem(key);
+        // if signed user is logged out and signed in again with the same email 
+        // the user info should be displayed with the same color as before
         if (savedColors) {
             const { background, color } = JSON.parse(savedColors);
             setBackgroundColor(background);
             setColor(color);
         } else {
+          // if not generate colors for the new user
             const bg = generateRandomColor();
             const col = generateRandomColor();
             setBackgroundColor(bg);
