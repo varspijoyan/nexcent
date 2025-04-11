@@ -19,6 +19,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [isLogoutBtnOpen, setIsLogoutBtnOpen] = useState(false);
   
   const generateRandomColor = () => {
     const red = Math.floor(Math.random() * 256).toString(16).padStart(2, "0");
@@ -43,7 +44,7 @@ const Header = () => {
         // if signed user is logged out and signed in again with the same email 
         // the user info should be displayed with the same color as before
         if (userKey) {
-            const { background, color } = JSON.parse(savedColors);
+            const { background, color } = JSON.parse(userKey);
             setBackgroundColor(background);
             setColor(color);
         } else {
@@ -107,7 +108,7 @@ const Header = () => {
             </button>
           ) : (
             <>
-              <div className={styles.userInfo}>
+              <div className={styles.userInfo} onClick={() => setIsLogoutBtnOpen(prev => !prev)}>
                 <div className={styles.avatar}>
                   <div style={inlineStyles}>
                     {user?.first_name && user?.last_name ? `${user.first_name.charAt(0)}${user.last_name.charAt(0)}` : "U"}
@@ -118,7 +119,7 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
-                <button className={styles.logoutBtn} onClick={() => dispatch(logout())}>{t("header.logout")}</button>
+                {isLogoutBtnOpen && <div className={styles.logoutBtn} onClick={() => dispatch(logout())}>{t("header.logout")}</div>}
               </div>
             </>
           )}
