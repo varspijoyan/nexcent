@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/Header-Logo.svg";
+import { logout } from "../../store/actions/authActions";
 import {
   getAuthorizationData,
   getUserData,
 } from "../../store/selectors/authSelectors";
 import styles from "../../styles/Header.module.css";
 import Language from "../language/Language";
-import { logout } from "../../store/actions/authActions";
 
 const Header = () => {
   const user = useSelector(getUserData);
@@ -44,7 +44,7 @@ const Header = () => {
             setBackgroundColor(background);
             setColor(color);
         } else {
-          // if not generate colors for the new user
+            // if not generate colors for the new user
             const bg = generateRandomColor();
             const col = generateRandomColor();
             setBackgroundColor(bg);
