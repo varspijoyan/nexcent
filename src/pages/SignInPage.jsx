@@ -1,4 +1,4 @@
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { api } from "../services/api/api";
 import { login, verify } from "../services/api/auth";
 import styles from "../styles/SignInPage.module.css";
@@ -7,12 +7,17 @@ import UsernamePage from "./UsernamePage";
 const SignInPage = () => {
   const [isOtpFieldShow, setOtpFieldShow] = useState(false); // to show otp input field
   const [isOtpVerified, setOtpVerified] = useState(false); // to show username form after otp verification
+  const [filledFields, setFilledFields] = useState({
+    email: "",
+    otp: "",
+  });
+  const [showError, setShowError] = useState({});
   const [state, action, isPending] = useActionState(
     async (prevState, formData) => {
       const email = formData.get("email");
       const otp = formData.get("otp");
 
-      const errors = {
+      const error = {
         emailError: "",
         otpError: "",
       };
@@ -21,7 +26,7 @@ const SignInPage = () => {
 
       if (otp) {
         if (!otp) {
-          errors.otpError = "OTP is required";
+          error.otpError = "OTP is required";
         } else {
           try {
             const data = await verify(email, otp);
@@ -34,14 +39,14 @@ const SignInPage = () => {
               setOtpVerified(true);
             }
           } catch (error) {
-            errors.otpError = "Something went wrong while trying to verify";
+            error.otpError = "Something went wrong while trying to verify";
           }
         }
       } else {
         if (!email) {
-          errors.emailError = "Email is required";
+          error.emailError = "Email is required";
         } else if (!emailFormat.test(email)) {
-          errors.emailError = "Invalid email format";
+          error.emailError = "Invalid email format";
         } else {
           try {
             const data = await login(email);
@@ -49,20 +54,39 @@ const SignInPage = () => {
               setOtpFieldShow(true);
             }
           } catch (error) {
-            errors.emailError = "Something went wrong while sending the email";
+            error.emailError = "Something went wrong while sending the email";
           }
         }
       }
 
-      const hasErrors = Object.values(errors).some((err) => err != "");
-      if (hasErrors) {
-        return { errors }; // Return the errors object if any errors exist
+      const haserror = Object.values(error).some((err) => err != "");
+      if (haserror) {
+        return { error }; // Return the error object if any error exist
       }
 
-      return { errors: {} }; // Return an empty errors object if no errors
+      return { error: {} }; // Return an empty error object if no error
     }
   );
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFilledFields((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    setShowError((prev) => ({
+      ...prev,
+      [`${name}Error`]: "",
+    }));
+  };
+
+  useEffect(() => {
+    if(state?.error) {
+      setShowError(state.error)
+    }
+  }, [state])
   return (
     <>
       {isOtpVerified ? (
@@ -72,9 +96,15 @@ const SignInPage = () => {
           <div className={styles.container}>
             <h2 className={styles.title}>Sign In Page</h2>
             <form className={styles.formContainer} action={action}>
-              <input type="email" name="email" placeholder="Enter your email" />
-              {state?.errors?.emailError && (
-                <p className={styles.error}>{state.errors.emailError}</p>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={filledFields.email}
+                onChange={handleChange}
+              />
+              {showError?.emailError && (
+                <p className={styles.error}>{showError.emailError}</p>
               )}
               {isOtpFieldShow && (
                 <>
@@ -82,9 +112,11 @@ const SignInPage = () => {
                     type="text"
                     name="otp"
                     placeholder="Enter otp verification"
+                    value={filledFields.otp}
+                    onChange={handleChange}
                   />
-                  {state?.errors?.otpError && (
-                    <p className={styles.error}>{state.errors.otpError}</p>
+                  {showError?.otpError && (
+                    <p className={styles.error}>{showError.otpError}</p>
                   )}
                 </>
               )}
