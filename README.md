@@ -13,6 +13,8 @@ If you are developing a production application, we recommend using TypeScript an
 
 ### About
 
+##### This is a cloning of a website template
+
 Simple Landing page website deployed on Netlify. This website has  routes for main page, sign in page and username form page. There is no home, features, community, blog and pricing pages added, and no apis fetched. 
 Used 3 libraries
 
